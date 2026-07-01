@@ -1,0 +1,16 @@
+from langchain_community.document_loaders import DirectoryLoader, PyPDFLoader
+
+loader = DirectoryLoader(
+    path="docs",
+    glob="*.pdf",                             #this is if we want to load a mutliple pdf eg folder 
+    loader_cls=PyPDFLoader
+)
+
+documents = loader.load()       #this sunction store whole folder in file using ram and memory 
+
+print(f"Total documents: {len(documents)}")           #if the floder is very large we use lazy_load as it take load only 1 needed page a
+                                                      #so no storage is used 
+                                                      
+for doc in documents:
+    print(doc.page_content[:500])
+    print("-" * 50)

@@ -1,0 +1,32 @@
+# Virtual environments
+venv/
+venv311/
+.venv/
+
+# Environment variables
+.env
+
+# Python cache
+__pycache__/
+*.pyc
+
+# VS Code
+.vscode/
+
+# Streamlit
+.streamlit/
+
+# ChromaDB
+my_chroma_db/
+
+# FAISS
+faiss_index/
+*.faiss
+*.pkl
+
+# Chat history
+chat_history.txt
+
+# OS files
+.DS_Store
+Thumbs.db
